@@ -4,17 +4,9 @@ A responsive language school management platform built with PHP, PDO, MySQL and 
 
 ## Preview
 
-Screenshots have not been added yet. Capture the application screens and save them under `docs/screenshots/` using the filenames below.
+![Homepage](docs/screenshots/homepage.png)
 
-| Page | Screenshot |
-| --- | --- |
-| Homepage | TODO: `docs/screenshots/homepage.png` |
-| Student login | TODO: `docs/screenshots/student-login.png` |
-| Student profile | TODO: `docs/screenshots/student-profile.png` |
-| Student registrations | TODO: `docs/screenshots/student-registrations.png` |
-| Admin dashboard | TODO: `docs/screenshots/admin-dashboard.png` |
-| Admin registrations | TODO: `docs/screenshots/admin-registrations.png` |
-| Admin courses | TODO: `docs/screenshots/admin-courses.png` |
+Browse the [student login](#student-login), [student profile](#student-profile), [student registrations](#student-registrations), [admin dashboard](#admin-dashboard), [admin registrations](#admin-registrations), and [admin courses](#admin-courses) screenshots below.
 
 ## Features
 
@@ -127,15 +119,35 @@ The interface supports desktop, laptop, tablet and mobile layouts. Course listin
 
 ## Screenshots
 
-No screenshots are currently available. Add the following files to `docs/screenshots/` when captured:
+Captured from the running application using the local demonstration accounts.
 
-- `homepage.png`
-- `student-login.png`
-- `student-profile.png`
-- `student-registrations.png`
-- `admin-dashboard.png`
-- `admin-registrations.png`
-- `admin-courses.png`
+### Homepage
+
+![Homepage](docs/screenshots/homepage.png)
+
+### Student login
+
+![Student login](docs/screenshots/student-login.png)
+
+### Student profile
+
+![Student profile](docs/screenshots/student-profile.png)
+
+### Student registrations
+
+![Student registrations](docs/screenshots/student-registrations.png)
+
+### Admin dashboard
+
+![Admin dashboard](docs/screenshots/admin-dashboard.png)
+
+### Admin registrations
+
+![Admin registrations](docs/screenshots/admin-registrations.png)
+
+### Admin courses
+
+![Admin courses](docs/screenshots/admin-courses.png)
 
 ## Future Improvements
 

@@ -1,6 +1,6 @@
 # Screenshots
 
-The portfolio screenshots have not been captured yet. Add the images listed below to this directory and update the Preview section in the project README with Markdown image links.
+Portfolio screenshots captured from the running application are stored in this directory and embedded in the project README.
 
 - `homepage.png`
 - `student-login.png`
