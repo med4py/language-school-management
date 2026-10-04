@@ -6,7 +6,7 @@ A responsive language school management platform built with PHP, PDO, MySQL and 
 
 ![Homepage](docs/screenshots/homepage.png)
 
-Browse the [student login](#student-login), [student profile](#student-profile), [student registrations](#student-registrations), [admin dashboard](#admin-dashboard), [admin registrations](#admin-registrations), and [admin courses](#admin-courses) screenshots below.
+A quick look at the public homepage. More student and administrator views are available in the [Screenshots](#screenshots) section below.
 
 ## Features
 
@@ -166,4 +166,4 @@ GitHub: [https://github.com/med4py](https://github.com/med4py)
 
 ## License
 
-No license has been added yet.
+This project is currently shared as a portfolio and educational project. No open-source license has been added yet.
