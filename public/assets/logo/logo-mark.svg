@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">EcoleLangue</title>
+  <path fill="#0F2D5B" d="M7 37 31 48l26-12-1 13-25 12L8 51z"/>
+  <path fill="#2563EB" d="m9 34 23 11 23-11v7L32 52 9 41z"/>
+  <circle cx="32" cy="27" r="15" fill="#3B82F6"/>
+  <path fill="#BFDBFE" d="M17 27c5-4 10-6 15-6s10 2 15 6c-5 4-10 6-15 6s-10-2-15-6Zm15-15c4 4 6 9 6 15s-2 11-6 15c-4-4-6-9-6-15s2-11 6-15Z"/>
+  <path fill="#0F2D5B" d="m12 12 20-10 20 10-20 10z"/>
+  <path fill="#fff" d="M22 13h20c-1 7-5 11-10 11s-9-4-10-11Z"/>
+  <path fill="#F59E0B" d="M11 12v20h2V12z"/>
+  <circle cx="12" cy="34" r="3" fill="#F59E0B"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-labelledby="title">
+  <title id="title">EcoleLangue — Apprendre sans limites</title>
+  <path fill="#fff" d="M4 38 28 49l26-12-1 13-25 12L5 52z"/>
+  <path fill="#3B82F6" d="m6 35 23 11 23-11v7L29 53 6 42z"/>
+  <circle cx="29" cy="28" r="15" fill="#3B82F6"/>
+  <path fill="#BFDBFE" d="M14 28c5-4 10-6 15-6s10 2 15 6c-5 4-10 6-15 6s-10-2-15-6Zm15-15c4 4 6 9 6 15s-2 11-6 15c-4-4-6-9-6-15s2-11 6-15Z"/>
+  <path fill="#fff" d="m9 13 20-10 20 10-20 10z"/>
+  <path fill="#0F2D5B" d="M19 14h20c-1 7-5 11-10 11s-9-4-10-11Z"/>
+  <path fill="#F59E0B" d="M8 13v20h2V13z"/><circle cx="9" cy="35" r="3" fill="#F59E0B"/>
+  <text x="64" y="36" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="750" letter-spacing="-1">Ecole<tspan fill="#60A5FA">Langue</tspan></text>
+  <text x="66" y="53" fill="#BFDBFE" font-family="Inter,Arial,sans-serif" font-size="8" font-weight="700" letter-spacing="3.4">APPRENDRE SANS LIMITES</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 340" role="img" aria-labelledby="title">
+  <title id="title">Livres de langues et globe terrestre</title>
+  <path fill="#E7F2FF" d="M16 274c18-45 57-54 97-47 23-62 88-87 143-63 37-78 153-82 189-15 57 2 83 38 84 83 1 36-30 63-83 63H98c-52 0-91-6-82-21Z"/>
+  <circle cx="337" cy="125" r="83" fill="#fff" opacity=".9"/>
+  <circle cx="337" cy="125" r="70" fill="#3B82F6"/>
+  <path fill="#10B981" d="M281 92c19-21 33-23 51-22l10 15-12 13 5 16-18 11-20-7-17 7-9-19Zm73 14 23 1 13 16-7 16-17-1-14-13Zm-49 45 19-5 23 13 5 23-15 17-17-9-5-18-19-7Zm82 7 22-11 8 17-17 21-17-4Z"/>
+  <ellipse cx="337" cy="125" rx="32" ry="70" fill="none" stroke="#BFDBFE" stroke-width="3"/>
+  <path fill="none" stroke="#BFDBFE" stroke-width="3" d="M271 125h132M280 96c33 18 80 18 114 0m-114 58c33-18 80-18 114 0"/>
+  <path fill="#0F2D5B" d="M314 197h46v10h-46zM327 208h20v41h-20zM310 247h55v10h-55z"/>
+  <path fill="#2563EB" d="M112 173h54v101h-54z"/><path fill="#fff" d="M120 182h38v5h-38zm0 12h31v4h-31zm0 12h35v4h-35z"/>
+  <path fill="#EF4444" d="M165 149h57v125h-57z"/><path fill="#fff" d="M174 160h39v5h-39zm0 13h32v4h-32zm0 12h37v4h-37z"/>
+  <path fill="#F59E0B" d="M222 184h53v90h-53z"/><path fill="#fff" d="M230 194h36v5h-36zm0 13h29v4h-29zm0 12h34v4h-34z"/>
+  <path fill="#10B981" d="M404 196c9-27 23-37 36-46 1 19-7 35-23 46 19-7 35-5 50 1-15 11-30 14-47 7 14 12 19 27 17 44-14-11-20-25-17-42-8 18-21 28-39 32 6-18 17-30 34-34-18 1-32-5-44-19 19-3 34 2 47 16-7-20-4-35 6-49 8 19 8 35 0 50Z"/>
+  <path fill="#2563EB" d="m85 276 197 0-22 18H107z"/><path fill="#0F2D5B" d="M102 294h164v8H102z"/>
+</svg>
