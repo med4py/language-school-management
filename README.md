@@ -1,124 +1,157 @@
-# EcoleLangue — Language School Management Platform
+# Language School Management Platform
 
-EcoleLangue is a lightweight language-school management application built with PHP and MySQL. Students can browse upcoming courses, send enrollment requests, and manage their profiles. Administrators can manage courses, students, enrollment decisions, and payment status.
+A responsive language school management platform built with PHP, PDO, MySQL and Bootstrap 5. It provides separate student and admin spaces to manage courses, enrollments, statuses and payment tracking.
+
+## Preview
+
+Screenshots have not been added yet. Capture the application screens and save them under `docs/screenshots/` using the filenames below.
+
+| Page | Screenshot |
+| --- | --- |
+| Homepage | TODO: `docs/screenshots/homepage.png` |
+| Student login | TODO: `docs/screenshots/student-login.png` |
+| Student profile | TODO: `docs/screenshots/student-profile.png` |
+| Student registrations | TODO: `docs/screenshots/student-registrations.png` |
+| Admin dashboard | TODO: `docs/screenshots/admin-dashboard.png` |
+| Admin registrations | TODO: `docs/screenshots/admin-registrations.png` |
+| Admin courses | TODO: `docs/screenshots/admin-courses.png` |
 
 ## Features
 
-- Public course catalogue showing future sessions, availability, dates, and prices
-- Separate student and administrator sign-in with hashed passwords
-- Student profile editing and enrollment request history
-- Transactional enrollment and cancellation with accurate seat counts
-- Course management with date, price, and capacity validation
-- Admin dashboard, student list, and enrollment/payment actions
-- Prepared PDO statements, role-based session checks, CSRF protection, and escaped output
-- Responsive interface using Bootstrap 5
-- Branded public course catalogue, split-screen sign-in, and compact role-based dashboard navigation
+### Student
 
-## Stack
+- Secure login
+- Profile management
+- Browse available courses
+- Request course enrollment
+- View enrollment and payment statuses
+- Cancel a pending enrollment
 
-- PHP 8.1+
-- MySQL 8+
+### Admin
+
+- Secure admin login
+- Dashboard statistics
+- Create, view, update and delete courses
+- View students
+- Review and manage registrations
+- Confirm or cancel registrations
+- Mark registrations as paid
+
+## Tech Stack
+
+- PHP 8+
 - PDO
-- Bootstrap 5.3
-- HTML and CSS
-- PHP sessions
+- MySQL
+- Bootstrap 5
+- HTML5
+- CSS3
+- JavaScript
+- PHP Sessions
 
-## Visual identity
+## Security
 
-The interface uses a navy, blue, and light-neutral palette with local SVG EcoleLangue logo and education illustration assets in `public/assets/`.
+- PDO prepared statements for database operations
+- Password hashing and verification with `password_hash()` and `password_verify()`
+- CSRF protection for state-changing requests
+- Role-based authorization for student and admin areas
+- Escaped dynamic output to help prevent cross-site scripting (XSS)
+- Transactional enrollment and cancellation logic to keep course seat counts consistent
 
-## Screenshots
+## Database
 
-Add screenshots of the public course catalogue, student area, and admin dashboard here:
+The database contains four main entities:
 
-| Public catalogue | Student profile | Admin dashboard |
-| --- | --- | --- |
-| `screenshots/home.png` | `screenshots/student-profile.png` | `screenshots/admin-dashboard.png` |
+- **Etudiant** — student identity, contact details and login credentials
+- **Cours** — language, level, dates, price and total/remaining seats
+- **Inscription** — student/course enrollment, registration status and payment status
+- **Admin** — administrator identity and login credentials
 
-## Installation
+Foreign keys maintain enrollment relationships. A unique student/course constraint prevents duplicate registrations, and seat availability is tracked on each course.
 
-1. Install PHP 8.1+ with the PDO MySQL extension and MySQL 8+.
-2. Create the database and load its schema and sample courses:
-
-   ```sh
-   mysql -u root -p < database/database.sql
-   ```
-
-3. Configure the database connection. The defaults are `127.0.0.1`, database `language_school`, user `root`, and an empty password. Override them with environment variables if needed:
-
-   ```sh
-   export DB_HOST=127.0.0.1
-   export DB_NAME=language_school
-   export DB_USER=root
-   export DB_PASSWORD='your-local-password'
-   ```
-
-4. Create or refresh the demonstration accounts:
-
-   ```sh
-   php database/seed.php
-   ```
-
-   Test the database connection from the command line with `php database/test-connection.php`.
-
-5. Start the built-in PHP web server with the public directory as its document root:
-
-   ```sh
-   php -S 127.0.0.1:8000 -t public
-   ```
-
-6. Open [http://127.0.0.1:8000](http://127.0.0.1:8000).
-
-Never deploy the PHP development server to production. Configure a production web server to use `public/` as its document root.
-
-## Demonstration accounts
-
-| Role | Login | Password |
-| --- | --- | --- |
-| Student | `student` | `Student123!` |
-| Administrator | `admin` | `Admin123!` |
-
-The seed script hashes these passwords with `password_hash()`. Change the demonstration credentials before using the project outside a local portfolio/demo environment.
-
-## Project structure
+## Project Structure
 
 ```text
 config/
-  bootstrap.php       Session, escaping, CSRF, flash messages, access checks
-  database.php        PDO connection and environment-based configuration
 controllers/
-  AdminController.php
-  AuthController.php
-  StudentController.php
 database/
-  database.sql        Tables, indexes, constraints, sample courses
-  seed.php            Hashed demonstration student and administrator accounts
-  test-connection.php CLI-only database connectivity check
 models/
-  Admin.php
-  Course.php
-  Registration.php
-  Student.php
 public/
-  assets/
-    illustrations/language-world.svg
-    logo/             EcoleLangue logo and favicon variants
-  css/style.css
-  js/app.js           Password visibility toggle
-  index.php           Front controller and route dispatch
 tests/
-  qa-smoke.php        Database-backed HTTP and workflow regression checks
 views/
-  admin/
-  auth/
-  student/
-  home.php
-  layout.php
+docs/screenshots/
 ```
 
-## Notes
+## Installation
 
-- Enrollment is unique per student and course, including previously cancelled requests, as enforced by the database constraint.
-- New registrations reserve a seat immediately; deleting a pending request or cancelling an enrollment restores it.
-- Payments are represented by the required `paiement` status on each enrollment; there is no separate payment gateway.
-- With MySQL running and the application server available at `http://127.0.0.1:8000`, run `php tests/qa-smoke.php` for the automated regression suite. The suite creates and removes temporary test data.
+Requirements: PHP 8+ with PDO MySQL and `mbstring`, and MySQL.
+
+```sh
+git clone https://github.com/med4py/language-school-management.git
+cd language-school-management
+mysql -u root < database/database.sql
+php database/seed.php
+php -S 127.0.0.1:8000 -t public
+```
+
+Open [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+The default local database connection uses host `127.0.0.1`, database `language_school`, user `root`, and an empty password. Configure `DB_HOST`, `DB_NAME`, `DB_USER`, and `DB_PASSWORD` environment variables before running the seed script or application if your local MySQL setup differs.
+
+## Demo Accounts
+
+**Student**
+
+- Login: `student`
+- Password: `Student123!`
+
+**Admin**
+
+- Login: `admin`
+- Password: `Admin123!`
+
+These credentials are for local demonstration only and should be changed in production.
+
+## Testing
+
+Run the existing automated QA suite while the PHP server and MySQL are available:
+
+```sh
+php tests/qa-smoke.php
+```
+
+The suite covers authentication, authorization, enrollment and course management workflows, CSRF rejection, SQL-injection-style login input, XSS output escaping, database integrity, and enrollment/seat transaction consistency.
+
+## Responsive Design
+
+The interface supports desktop, laptop, tablet and mobile layouts. Course listings and management controls adapt to smaller screens, while responsive tables and navigation remain accessible.
+
+## Screenshots
+
+No screenshots are currently available. Add the following files to `docs/screenshots/` when captured:
+
+- `homepage.png`
+- `student-login.png`
+- `student-profile.png`
+- `student-registrations.png`
+- `admin-dashboard.png`
+- `admin-registrations.png`
+- `admin-courses.png`
+
+## Future Improvements
+
+- Pagination for larger course, student and registration lists
+- Email notifications for enrollment status changes
+- Docker-based local development setup
+- Production deployment configuration
+- Password reset workflow
+- Expanded analytics for administrators
+
+## Author
+
+Ahmed Karkach
+
+GitHub: [https://github.com/med4py](https://github.com/med4py)
+
+## License
+
+No license has been added yet.
